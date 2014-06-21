@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Addon Author="Garet Jax" APIVersion="8" Name="AddonsMonitor" Description="Performance monitor for addons." Version="5">
+    <Script Name="PixiePlotFork.lua"/>
+    <Script Name="AMutils.lua"/>
+    <Script Name="AMdata.lua"/>
+    <Script Name="AMdataManager.lua"/>
+    <Script Name="AMwindow.lua"/>
+    <Script Name="AMgrid.lua"/>
+    <Script Name="AMpanel.lua"/>
+    <Script Name="AM.lua"/>
+    <Form Name="AMpanel.xml"/>
+    <Form Name="AMwindow.xml"/>
+    <Form Name="AMgrid.xml"/>
+</Addon>

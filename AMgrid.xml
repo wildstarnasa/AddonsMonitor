@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Forms>
+    <Form Class="Window" LAnchorPoint="0" LAnchorOffset="0" TAnchorPoint="0" TAnchorOffset="27" RAnchorPoint="1" RAnchorOffset="0" BAnchorPoint="1" BAnchorOffset="0" RelativeToClient="1" Font="Default" Text="" Template="Default" TooltipType="OnCursor" Name="Grids" BGColor="ffffffff" TextColor="ffffffff" TooltipColor="" Sprite="AbilitiesSprites:spr_IconListTiled" Picture="1" IgnoreMouse="1" VScroll="0" HScroll="0" Tooltip="">
+        <Control Class="Grid" LAnchorPoint="0" LAnchorOffset="0" TAnchorPoint="0" TAnchorOffset="0" RAnchorPoint="1" RAnchorOffset="0" BAnchorPoint="1" BAnchorOffset="0" RelativeToClient="1" Font="CRB_Pixel" Text="" Template="CRB_Hologram" TooltipType="OnCursor" Name="LiveGrid" BGColor="ffffffff" TextColor="ffffffff" TooltipColor="" CellBGNormalColor="" CellBGSelectedColor="" CellBGNormalFocusColor="" CellBGSelectedFocusColor="" TextNormalColor="" TextSelectedColor="" TextNormalFocusColor="" TextSelectedFocusColor="" RowHeight="16" HeaderHeight="24" MultiColumn="1" SelectWholeRow="1" HeaderRow="1" VariableHeight="0" MultiSelect="0" FocusOnMouseOver="1" AutoSizeX="0" AutoSizeY="0" FocusOnClick="0" HorzRowMargin="0" HorzCellMargin="0" Tooltip="" HScroll="1" VScroll="1" DT_SINGLELINE="0" VertRowMargin="0" ImageTextSpacing="0" HeaderBG="" HeaderFont="CRB_Pixel" NewWindowDepth="1" NeverBringToFront="0" DT_CENTER="0" IgnoreTooltipDelay="1" NotRelative="0" Overlapped="1" Picture="0" VScrollLeftSide="0" DT_VCENTER="0">
+            <Column Name="--- addon status ---
+
+err
+
+Current addon status. Empty value means everything is OK. Sort to see statuses with errors at the top. Addons that are turned off are not displayed at all." Width="30" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="0" DT_RIGHT="0"/>
+            <Column Name="--- addon name and folder ---
+
+name
+
+Addon name and folder, if different from the name. Built-in Carbine addons are greyed out." Width="110" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="0" DT_RIGHT="1"/>
+            <Column Name="--- load per frame ---
+
+L/F
+
+Current load per frame - how much processing time does the addon take currently, scaled to current frame display time. (in milliseconds, from API)" Width="50" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_RIGHT="1"/>
+            <Column Name="--- load per second ---
+
+L/S
+
+Current load per second - how much processing time does the addon take currently, scaled to one second. (in milliseconds, from API)" Width="40" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_RIGHT="1"/>
+            <Column Name="--- average load over 10 seconds ---
+
+L 10
+
+Average load per second over last 10 seconds. (in milliseconds, resets on reload UI, computed)" Width="40" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_RIGHT="1"/>
+            <Column Name="--- average load ---
+
+avgL
+
+Average load per second over last two minutes. (in milliseconds, resets on reload UI, computed)" Width="40" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_RIGHT="1"/>
+            <Column Name="--- maximum load per second ---
+
+maxL
+
+Maximum load per second.  (in milliseconds, resets on reload UI, computed)" Width="40" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_RIGHT="1"/>
+            <Column Name="--- total processing time ---
+
+sumL
+
+Total processing time for this addon. (in seconds, resets on reload UI, from API)" Width="50" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_RIGHT="1"/>
+            <Column Name="--- number of calls ---
+
+calls
+
+Total number of calls made to this addon. (resets on reload UI, from API)" Width="50" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_RIGHT="1"/>
+            <Column Name="--- max load of call ---
+
+maxCL
+
+Maximum load of a single call. (in milliseconds, resets on reload UI, from API)" Width="40" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_RIGHT="1"/>
+            <Column Name="--- current memory ---
+
+mem
+
+Current memory taken. (in Kb, from API)" Width="40" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_RIGHT="1" DT_VCENTER="1"/>
+            <Column Name="--- maximum memory taken ---
+
+maxM
+
+Maximum memory taken (in Kb, resets on reload UI, computed)" Width="40" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_RIGHT="1" DT_VCENTER="1"/>
+            <Column Name="--- update date ---
+
+updated
+
+Last modification date." Width="100" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_RIGHT="1"/>
+            <Column Name="--- has configuration? ---
+
+cfg
+
+Does it have a configuration?" Width="30" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_CENTER="1"/>
+            <Column Name="--- required API version ---
+
+api
+
+Api version specified in toc.xml, &apos;~&apos; before the version means that &apos;ignore version mismatch&apos; was selected." Width="30" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_CENTER="1"/>
+            <Column Name="--- addon author ---
+
+author
+
+Addon authors. Built-in Carbine addons are greyed out." Width="70" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1" DT_CENTER="0" DT_SINGLELINE="1"/>
+            <Column Name="--- list of errors ---
+
+errors
+
+List of errors reported by the api for this addon. Hover to read the full text." Width="50" TextColor="White" Image="" MinWidth="10" MaxWidth="2048" MergeLeft="0" SimpleSort="1" DT_VCENTER="1"/>
+            <Event Name="MouseButtonUp" Function="OnGridClick"/>
+            <Event Name="GridSelChange" Function="OnGridSelChange"/>
+            <Event Name="MouseButtonDown" Function="OnGridClickStart"/>
+        </Control>
+        <Control Class="Window" LAnchorPoint="0" LAnchorOffset="0" TAnchorPoint="0" TAnchorOffset="245" RAnchorPoint="0" RAnchorOffset="560" BAnchorPoint="0" BAnchorOffset="405" RelativeToClient="1" Font="Default" Text="" Template="Default" TooltipType="OnCursor" Name="LiveChart" Border="0" Picture="1" SwallowMouseClicks="1" Moveable="1" Escapable="0" Overlapped="1" BGColor="ffffffff" TextColor="ffffffff" TooltipColor="" Sprite="CRB_Basekit:kitBase_HoloBlue_InsetBorder_Thin" NoClip="1" Sizable="1" Visible="0" Tooltip="" TextId="">
+            <Control Class="Button" Base="CRB_Basekit:kitBtn_Dropdown_Small" Font="Thick" ButtonType="PushButton" RadioGroup="" LAnchorPoint="1" LAnchorOffset="-12" TAnchorPoint="0" TAnchorOffset="7" RAnchorPoint="1" RAnchorOffset="1" BAnchorPoint="0" BAnchorOffset="20" DT_VCENTER="1" DT_CENTER="1" TooltipType="OnCursor" Name="HideChart" BGColor="ffffffff" TextColor="ffffffff" TooltipColor="" NormalTextColor="ffffffff" PressedTextColor="ffffffff" FlybyTextColor="ffffffff" PressedFlybyTextColor="ffffffff" DisabledTextColor="ffffffff" NoClip="1" Tooltip="close the addons graph and deselect the monitored element" IgnoreTooltipDelay="1" TooltipId="" Visible="1">
+                <Event Name="ButtonSignal" Function="ButtonHideLiveGraph"/>
+            </Control>
+        </Control>
+        <Control Class="Window" LAnchorPoint="0" LAnchorOffset="0" TAnchorPoint="0" TAnchorOffset="408" RAnchorPoint="0" RAnchorOffset="560" BAnchorPoint="0" BAnchorOffset="568" RelativeToClient="1" Font="Default" Text="" Template="Default" TooltipType="OnCursor" Name="HistoryChart" Border="0" Picture="1" SwallowMouseClicks="1" Moveable="1" Escapable="0" Overlapped="1" BGColor="ffffffff" TextColor="ffffffff" TooltipColor="" Sprite="CRB_Basekit:kitBase_HoloBlue_InsetBorder_Thin" NoClip="1" Sizable="1" Visible="0" Tooltip="" TextId="">
+            <Control Class="Button" Base="CRB_Basekit:kitBtn_Dropdown_Small" Font="Thick" ButtonType="PushButton" RadioGroup="" LAnchorPoint="1" LAnchorOffset="-12" TAnchorPoint="0" TAnchorOffset="7" RAnchorPoint="1" RAnchorOffset="1" BAnchorPoint="0" BAnchorOffset="20" DT_VCENTER="1" DT_CENTER="1" TooltipType="OnCursor" Name="HideChart" BGColor="ffffffff" TextColor="ffffffff" TooltipColor="" NormalTextColor="ffffffff" PressedTextColor="ffffffff" FlybyTextColor="ffffffff" PressedFlybyTextColor="ffffffff" DisabledTextColor="ffffffff" NoClip="1" Tooltip="close the addons graph and deselect the monitored element" IgnoreTooltipDelay="1" TooltipId="" Visible="1">
+                <Event Name="ButtonSignal" Function="ButtonHideHistoryGraph"/>
+            </Control>
+            <Event Name="WindowSizeChanged" Function="OnHistoryGraphResized"/>
+        </Control>
+        <Control Class="Window" LAnchorPoint="0" LAnchorOffset="563" TAnchorPoint="0" TAnchorOffset="246" RAnchorPoint="0" RAnchorOffset="908" BAnchorPoint="0" BAnchorOffset="567" RelativeToClient="1" Font="Default" Text="test" Template="Default" TooltipType="OnCursor" Name="Events" BGColor="ffffffff" TextColor="ffffffff" TooltipColor="" TextId="" Border="0" IgnoreMouse="0" Picture="0" Sprite="AbilitiesSprites:spr_StatGreenVertProg" NoClip="1" Sizable="1" Moveable="1" Visible="0">
+            <Control Class="Grid" LAnchorPoint="0" LAnchorOffset="0" TAnchorPoint="0" TAnchorOffset="0" RAnchorPoint="1" RAnchorOffset="0" BAnchorPoint="1" BAnchorOffset="0" RelativeToClient="1" Font="CRB_Pixel" Text="" Template="CRB_Normal" TooltipType="OnCursor" Name="EventsGrid" BGColor="ffffffff" TextColor="ffffffff" TooltipColor="" CellBGNormalColor="" CellBGSelectedColor="" CellBGNormalFocusColor="" CellBGSelectedFocusColor="" TextNormalColor="" TextSelectedColor="" TextNormalFocusColor="" TextSelectedFocusColor="" NoClip="0" MultiColumn="0" HeaderRow="0" VariableHeight="0" AutoSizeX="0" SelectWholeRow="0" MultiSelect="0" VScroll="1" HScroll="0" RowHeight="16" HeaderFont="CRB_Pixel" HeaderHeight="24" HorzRowMargin="0" HorzCellMargin="0" VertRowMargin="0" ImageTextSpacing="0" FocusOnMouseOver="0" Overlapped="1" NewWindowDepth="1" IgnoreTooltipDelay="1" Tooltip="" AutoHideScroll="1" IgnoreMouse="0"/>
+        </Control>
+    </Form>
+</Forms>
