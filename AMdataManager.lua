@@ -223,20 +223,16 @@ function AMdataManager:AddAddonByUniqueName(sUniqueName)
 	return oThisAddon
 end
 
-local tAddonList = {}
-function GetAddons()
-	local strDirPrev = string.match(Apollo.GetAssetFolder(), "(.-)[\\/][Aa][Dd][Dd][Oo][Nn][Ss]")
-	local tAddonXML = XmlDoc.CreateFromFile(strDirPrev.."\\Addons.xml"):ToTable()
+function AMdataManager:GetAddons()
+	local strWildstarDir = string.match(Apollo.GetAssetFolder(), "(.-)[\\/][Aa][Dd][Dd][Oo][Nn][Ss]")
+	local tAddonXML = XmlDoc.CreateFromFile(strWildstarDir.."\\Addons.xml"):ToTable()
 	for k,v in pairs(tAddonXML) do
 		if v.__XmlNode == "Addon" then
-			if v.Carbine == 1 then
-				table.insert(tAddonList, v.Folder)
+			if v.Carbine == "1" then
+				table.insert(self.tAddonsListTmp, v.Folder)
 			else
-				local tSubToc = XmlDoc.CreateFromFile(strDirPrev.."\\Addons\\"..v.Folder.."\\toc.xml")
-				if tSubToc then
-					local tTocTable = tSubToc:ToTable()
-					table.insert(tAddonList, tSubToc.Name)
-				end
+				local tSubToc = XmlDoc.CreateFromFile(strWildstarDir.."\\Addons\\" ..v.Folder.."\\toc.xml"):ToTable()
+				table.insert(self.tAddonsListTmp, tSubToc.Name)
 			end
 		end
 	end
@@ -262,3 +258,4 @@ end
 
 
 _G.AddonsManagerStuff.AMdataManager = AMdataManager
+
